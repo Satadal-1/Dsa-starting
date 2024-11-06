@@ -13,7 +13,10 @@ public class FirstAndLastPosition {
     public static int[] searchIndex(int[] arr, int target) {
         int[] ans = {-1, -1};
         ans[0] = search(arr, target, true);  // Find first occurrence
-        ans[1] = search(arr, target, false); // Find last occurrence
+        if (ans[0] != -1) {                         
+            ans[1] = search(arr, target, false); // Find last occurrence
+        }
+        
         return ans;
     }
 
